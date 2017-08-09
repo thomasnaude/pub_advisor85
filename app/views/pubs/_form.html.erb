@@ -1,0 +1,7 @@
+<%= simple_form_for pub do |f| %>
+  <%= f.input :name, placeholder: "Enter the pub's name" %>
+  <%= f.input :description, placeholder: "What is the pub famous for ?" %>
+  <%= f.input :address %>
+  <%= f.input :happy_hour_price, input_html: { min: 0, max: 99 } %>
+  <%= f.button :submit %>
+<% end %>

@@ -1,0 +1,16 @@
+<div class="container">
+  <h1><%= @pub.name %></h1>
+  <p>
+    <%= @pub.address %>
+  </p>
+  <p><%= @pub.description %></p>
+  <p><%= @pub.happy_hour_price %>€</p>
+
+  <%= render 'reviews/index', reviews: @pub.reviews %>
+
+  <%= link_to "Add a review", new_pub_review_path(@pub), class: "btn btn-danger" %>
+
+  <%= link_to "< Back to pub list", pubs_path, class: "btn btn-primary" %>
+  <%= link_to "Edit pub", edit_pub_path(@pub) %>
+
+</div>
